@@ -1,0 +1,15 @@
+Random XX chain: entanglement entropy
+L = 64; 
+nsample = 90000; 
+data = {}; 
+For[n = 1, n <= nsample, n++,JJ = Table[RandomReal[], {i, 1, L - 1}]; AppendTo[JJ, 0]; 
+     T = Table[(JJ[[j]]/2.)*KroneckerDelta[i, j + 1] + (JJ[[j - 1]]/2.)*KroneckerDelta[i, j - 1], 
+       {i, 1, L}, {j, 1, L}]; Spect = Eigensystem[T]; ind = Table[i, {i, 1, L}]; eigval = Spect[[1]]; 
+     ind = Select[ind, eigval[[#1]] < 0 & ]; eigvec = Table[Spect[[2,ind[[k]]]], {k, 1, Length[ind]}]; 
+     Corr[x_, y_] := Total[Table[eigvec[[q,x]]*eigvec[[q,y]], {q, 1, Length[eigvec]}]]; ent = {}; 
+     For[k = 1, k <= L/4, k++, shift = (L - 2*k)/2; ll = 2*k; cmat = Table[Corr[shift + x, shift + y], 
+         {x, 1, ll}, {y, 1, ll}]; eeig = Eigenvalues[cmat]; 
+       Ent = Sum[If[Abs[eeig[[i]]] > 0 && Abs[eeig[[i]]] < 1, (-eeig[[i]])*Log[eeig[[i]]] - 
+           (1 - eeig[[i]])*Log[1 - eeig[[i]]], 0], {i, 1, Length[eeig]}]; AppendTo[ent, Ent]; ]; 
+     Print[ent]; ];
+Export["/u/he/valba/Github/negatitivy/ran_negativity/mathematica/test.dat", data]; 

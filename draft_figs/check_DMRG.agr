@@ -1,61 +1,33 @@
 # Grace project file
 #
-@version 50123
+@version 50122
 @page size 792, 612
 @page scroll 5%
 @page inout 5%
 @link page off
-@map font 8 to "Courier", "Courier"
-@map font 10 to "Courier-Bold", "Courier-Bold"
-@map font 11 to "Courier-BoldOblique", "Courier-BoldOblique"
-@map font 9 to "Courier-Oblique", "Courier-Oblique"
-@map font 14 to "Courier-Regular", "Courier-Regular"
-@map font 15 to "Dingbats-Regular", "Dingbats-Regular"
+@map font 13 to "ZapfDingbats", "ZapfDingbats"
 @map font 4 to "Helvetica", "Helvetica"
 @map font 6 to "Helvetica-Bold", "Helvetica-Bold"
-@map font 7 to "Helvetica-BoldOblique", "Helvetica-BoldOblique"
 @map font 5 to "Helvetica-Oblique", "Helvetica-Oblique"
-@map font 20 to "NimbusMonoL-Bold", "NimbusMonoL-Bold"
-@map font 21 to "NimbusMonoL-BoldOblique", "NimbusMonoL-BoldOblique"
-@map font 22 to "NimbusMonoL-Regular", "NimbusMonoL-Regular"
-@map font 23 to "NimbusMonoL-RegularOblique", "NimbusMonoL-RegularOblique"
-@map font 24 to "NimbusRomanNo9L-Medium", "NimbusRomanNo9L-Medium"
-@map font 25 to "NimbusRomanNo9L-MediumItalic", "NimbusRomanNo9L-MediumItalic"
-@map font 26 to "NimbusRomanNo9L-Regular", "NimbusRomanNo9L-Regular"
-@map font 27 to "NimbusRomanNo9L-RegularItalic", "NimbusRomanNo9L-RegularItalic"
-@map font 28 to "NimbusSansL-Bold", "NimbusSansL-Bold"
-@map font 29 to "NimbusSansL-BoldCondensed", "NimbusSansL-BoldCondensed"
-@map font 30 to "NimbusSansL-BoldCondensedItalic", "NimbusSansL-BoldCondensedItalic"
-@map font 31 to "NimbusSansL-BoldItalic", "NimbusSansL-BoldItalic"
-@map font 32 to "NimbusSansL-Regular", "NimbusSansL-Regular"
-@map font 33 to "NimbusSansL-RegularCondensed", "NimbusSansL-RegularCondensed"
-@map font 34 to "NimbusSansL-RegularCondensedItalic", "NimbusSansL-RegularCondensedItalic"
-@map font 35 to "NimbusSansL-RegularItalic", "NimbusSansL-RegularItalic"
-@map font 36 to "StandardSymbolsL-Regular", "StandardSymbolsL-Regular"
-@map font 12 to "Symbol", "Symbol"
-@map font 38 to "Symbol-Regular", "Symbol-Regular"
-@map font 2 to "Times-Bold", "Times-Bold"
-@map font 3 to "Times-BoldItalic", "Times-BoldItalic"
-@map font 1 to "Times-Italic", "Times-Italic"
+@map font 7 to "Helvetica-BoldOblique", "Helvetica-BoldOblique"
+@map font 17 to "Nimbus-Sans-L-Regular-Condensed", "Nimbus-Sans-L-Regular-Condensed"
+@map font 18 to "Nimbus-Sans-L-Bold-Condensed", "Nimbus-Sans-L-Bold-Condensed"
+@map font 19 to "Nimbus-Sans-L-Regular-Condensed-Italic", "Nimbus-Sans-L-Regular-Condensed-Italic"
+@map font 20 to "Nimbus-Sans-L-Bold-Condensed-Italic", "Nimbus-Sans-L-Bold-Condensed-Italic"
 @map font 0 to "Times-Roman", "Times-Roman"
-@map font 43 to "URWBookmanL-DemiBold", "URWBookmanL-DemiBold"
-@map font 44 to "URWBookmanL-DemiBoldItalic", "URWBookmanL-DemiBoldItalic"
-@map font 45 to "URWBookmanL-Light", "URWBookmanL-Light"
-@map font 46 to "URWBookmanL-LightItalic", "URWBookmanL-LightItalic"
-@map font 47 to "URWChanceryL-MediumItalic", "URWChanceryL-MediumItalic"
-@map font 48 to "URWGothicL-Book", "URWGothicL-Book"
-@map font 49 to "URWGothicL-BookOblique", "URWGothicL-BookOblique"
-@map font 50 to "URWGothicL-Demi", "URWGothicL-Demi"
-@map font 51 to "URWGothicL-DemiOblique", "URWGothicL-DemiOblique"
-@map font 52 to "URWPalladioL-Bold", "URWPalladioL-Bold"
-@map font 53 to "URWPalladioL-BoldItalic", "URWPalladioL-BoldItalic"
-@map font 54 to "URWPalladioL-Italic", "URWPalladioL-Italic"
-@map font 55 to "URWPalladioL-Roman", "URWPalladioL-Roman"
-@map font 56 to "Utopia-Bold", "Utopia-Bold"
-@map font 57 to "Utopia-BoldItalic", "Utopia-BoldItalic"
-@map font 58 to "Utopia-Italic", "Utopia-Italic"
-@map font 59 to "Utopia-Regular", "Utopia-Regular"
-@map font 13 to "ZapfDingbats", "ZapfDingbats"
+@map font 2 to "Times-Bold", "Times-Bold"
+@map font 1 to "Times-Italic", "Times-Italic"
+@map font 3 to "Times-BoldItalic", "Times-BoldItalic"
+@map font 8 to "Courier", "Courier"
+@map font 10 to "Courier-Bold", "Courier-Bold"
+@map font 9 to "Courier-Oblique", "Courier-Oblique"
+@map font 11 to "Courier-BoldOblique", "Courier-BoldOblique"
+@map font 29 to "URW-Palladio-L-Roman", "URW-Palladio-L-Roman"
+@map font 30 to "URW-Palladio-L-Bold", "URW-Palladio-L-Bold"
+@map font 31 to "URW-Palladio-L-Italic", "URW-Palladio-L-Italic"
+@map font 32 to "URW-Palladio-L-Bold-Italic", "URW-Palladio-L-Bold-Italic"
+@map font 12 to "Symbol", "Symbol"
+@map font 34 to "URW-Chancery-L-Medium-Italic", "URW-Chancery-L-Medium-Italic"
 @map color 0 to (255, 255, 255), "white"
 @map color 1 to (0, 0, 0), "black"
 @map color 2 to (255, 0, 0), "red"
@@ -91,7 +63,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Sat Jan 16 19:46:39 2016"
+@timestamp def "Sun Jan 17 10:21:24 2016"
 @with string
 @    string on
 @    string loctype view
@@ -148,7 +120,7 @@
 @g0 fixedpoint format general general
 @g0 fixedpoint prec 6, 6
 @with g0
-@    world 0.936229671701, 0.927782841078, 24.409026639, 2.08272367771
+@    world 0.933429431105, 0.897031431898, 25.5056046032, 2.11938300349
 @    stack world 0, 0, 0, 0
 @    znorm 1
 @    view 0.150000, 0.150000, 1.150000, 0.850000
@@ -293,21 +265,21 @@
 @    frame background pattern 0
 @    s0 hidden false
 @    s0 type xy
-@    s0 symbol 3
-@    s0 symbol size 1.000000
-@    s0 symbol color 4
+@    s0 symbol 9
+@    s0 symbol size 0.570000
+@    s0 symbol color 2
 @    s0 symbol pattern 1
-@    s0 symbol fill color 4
+@    s0 symbol fill color 2
 @    s0 symbol fill pattern 0
-@    s0 symbol linewidth 1.0
+@    s0 symbol linewidth 1.5
 @    s0 symbol linestyle 1
 @    s0 symbol char 65
 @    s0 symbol char font 0
 @    s0 symbol skip 0
 @    s0 line type 1
-@    s0 line linestyle 2
+@    s0 line linestyle 0
 @    s0 line linewidth 1.0
-@    s0 line color 4
+@    s0 line color 1
 @    s0 line pattern 1
 @    s0 baseline type 0
 @    s0 baseline off
@@ -329,7 +301,7 @@
 @    s0 avalue offset 0.000000 , 0.000000
 @    s0 errorbar on
 @    s0 errorbar place both
-@    s0 errorbar color 4
+@    s0 errorbar color 2
 @    s0 errorbar pattern 1
 @    s0 errorbar size 1.000000
 @    s0 errorbar linewidth 1.0
@@ -338,23 +310,23 @@
 @    s0 errorbar riser linestyle 1
 @    s0 errorbar riser clip off
 @    s0 errorbar riser clip length 0.100000
-@    s0 comment "/u/he/valba/Github/ran_negativity/data/re"
-@    s0 legend  "DMRG L=32"
+@    s0 comment "/u/he/valba/Github/ran_negativity/data/XXExactL64.dat"
+@    s0 legend  "Exact"
 @    s1 hidden false
 @    s1 type xy
-@    s1 symbol 1
-@    s1 symbol size 1.000000
-@    s1 symbol color 1
+@    s1 symbol 9
+@    s1 symbol size 0.570000
+@    s1 symbol color 2
 @    s1 symbol pattern 1
-@    s1 symbol fill color 1
+@    s1 symbol fill color 2
 @    s1 symbol fill pattern 0
-@    s1 symbol linewidth 1.0
+@    s1 symbol linewidth 1.5
 @    s1 symbol linestyle 1
 @    s1 symbol char 65
 @    s1 symbol char font 0
 @    s1 symbol skip 0
 @    s1 line type 1
-@    s1 line linestyle 2
+@    s1 line linestyle 0
 @    s1 line linewidth 1.0
 @    s1 line color 1
 @    s1 line pattern 1
@@ -378,7 +350,7 @@
 @    s1 avalue offset 0.000000 , 0.000000
 @    s1 errorbar on
 @    s1 errorbar place both
-@    s1 errorbar color 1
+@    s1 errorbar color 2
 @    s1 errorbar pattern 1
 @    s1 errorbar size 1.000000
 @    s1 errorbar linewidth 1.0
@@ -387,25 +359,25 @@
 @    s1 errorbar riser linestyle 1
 @    s1 errorbar riser clip off
 @    s1 errorbar riser clip length 0.100000
-@    s1 comment "/u/he/valba/Github/ran_negativity/data/re"
-@    s1 legend  "DMRG L=64"
+@    s1 comment "/u/he/valba/Github/ran_negativity/data/XXExactL128.dat"
+@    s1 legend  ""
 @    s2 hidden false
 @    s2 type xy
-@    s2 symbol 2
-@    s2 symbol size 1.000000
-@    s2 symbol color 3
+@    s2 symbol 9
+@    s2 symbol size 0.570000
+@    s2 symbol color 2
 @    s2 symbol pattern 1
-@    s2 symbol fill color 3
+@    s2 symbol fill color 2
 @    s2 symbol fill pattern 0
-@    s2 symbol linewidth 1.0
+@    s2 symbol linewidth 1.5
 @    s2 symbol linestyle 1
 @    s2 symbol char 65
 @    s2 symbol char font 0
 @    s2 symbol skip 0
 @    s2 line type 1
-@    s2 line linestyle 2
+@    s2 line linestyle 0
 @    s2 line linewidth 1.0
-@    s2 line color 3
+@    s2 line color 1
 @    s2 line pattern 1
 @    s2 baseline type 0
 @    s2 baseline off
@@ -427,7 +399,7 @@
 @    s2 avalue offset 0.000000 , 0.000000
 @    s2 errorbar on
 @    s2 errorbar place both
-@    s2 errorbar color 3
+@    s2 errorbar color 2
 @    s2 errorbar pattern 1
 @    s2 errorbar size 1.000000
 @    s2 errorbar linewidth 1.0
@@ -436,17 +408,17 @@
 @    s2 errorbar riser linestyle 1
 @    s2 errorbar riser clip off
 @    s2 errorbar riser clip length 0.100000
-@    s2 comment "Cols 1:2"
-@    s2 legend  "DMRG L=128"
+@    s2 comment "/u/he/valba/Github/ran_negativity/data/XXExactL32.dat"
+@    s2 legend  ""
 @    s3 hidden false
 @    s3 type xy
 @    s3 symbol 9
-@    s3 symbol size 1.000000
+@    s3 symbol size 0.570000
 @    s3 symbol color 2
 @    s3 symbol pattern 1
 @    s3 symbol fill color 2
 @    s3 symbol fill pattern 0
-@    s3 symbol linewidth 1.0
+@    s3 symbol linewidth 1.5
 @    s3 symbol linestyle 1
 @    s3 symbol char 65
 @    s3 symbol char font 0
@@ -485,23 +457,23 @@
 @    s3 errorbar riser linestyle 1
 @    s3 errorbar riser clip off
 @    s3 errorbar riser clip length 0.100000
-@    s3 comment "/u/he/valba/Github/ran_negativity/data/XXExactL64.dat"
-@    s3 legend  "Exact"
+@    s3 comment "/u/he/valba/Github/negatitivy/ran_negativity/draft_figs/test1.dat"
+@    s3 legend  ""
 @    s4 hidden false
 @    s4 type xy
-@    s4 symbol 9
+@    s4 symbol 3
 @    s4 symbol size 1.000000
-@    s4 symbol color 2
+@    s4 symbol color 4
 @    s4 symbol pattern 1
-@    s4 symbol fill color 2
+@    s4 symbol fill color 4
 @    s4 symbol fill pattern 0
 @    s4 symbol linewidth 1.0
 @    s4 symbol linestyle 1
 @    s4 symbol char 65
 @    s4 symbol char font 0
 @    s4 symbol skip 0
-@    s4 line type 0
-@    s4 line linestyle 1
+@    s4 line type 1
+@    s4 line linestyle 2
 @    s4 line linewidth 1.0
 @    s4 line color 4
 @    s4 line pattern 1
@@ -525,7 +497,7 @@
 @    s4 avalue offset 0.000000 , 0.000000
 @    s4 errorbar on
 @    s4 errorbar place both
-@    s4 errorbar color 2
+@    s4 errorbar color 4
 @    s4 errorbar pattern 1
 @    s4 errorbar size 1.000000
 @    s4 errorbar linewidth 1.0
@@ -534,25 +506,25 @@
 @    s4 errorbar riser linestyle 1
 @    s4 errorbar riser clip off
 @    s4 errorbar riser clip length 0.100000
-@    s4 comment "/u/he/valba/Github/ran_negativity/data/XXExactL128.dat"
-@    s4 legend  ""
+@    s4 comment "/u/he/valba/Github/ran_negativity/data/re"
+@    s4 legend  "DMRG L=32"
 @    s5 hidden false
 @    s5 type xy
-@    s5 symbol 9
+@    s5 symbol 1
 @    s5 symbol size 1.000000
-@    s5 symbol color 2
+@    s5 symbol color 1
 @    s5 symbol pattern 1
-@    s5 symbol fill color 2
+@    s5 symbol fill color 1
 @    s5 symbol fill pattern 0
 @    s5 symbol linewidth 1.0
 @    s5 symbol linestyle 1
 @    s5 symbol char 65
 @    s5 symbol char font 0
 @    s5 symbol skip 0
-@    s5 line type 0
-@    s5 line linestyle 1
+@    s5 line type 1
+@    s5 line linestyle 2
 @    s5 line linewidth 1.0
-@    s5 line color 4
+@    s5 line color 1
 @    s5 line pattern 1
 @    s5 baseline type 0
 @    s5 baseline off
@@ -574,7 +546,7 @@
 @    s5 avalue offset 0.000000 , 0.000000
 @    s5 errorbar on
 @    s5 errorbar place both
-@    s5 errorbar color 2
+@    s5 errorbar color 1
 @    s5 errorbar pattern 1
 @    s5 errorbar size 1.000000
 @    s5 errorbar linewidth 1.0
@@ -583,15 +555,15 @@
 @    s5 errorbar riser linestyle 1
 @    s5 errorbar riser clip off
 @    s5 errorbar riser clip length 0.100000
-@    s5 comment "/u/he/valba/Github/ran_negativity/data/XXExactL32.dat"
-@    s5 legend  ""
+@    s5 comment "/u/he/valba/Github/ran_negativity/data/re"
+@    s5 legend  "DMRG L=64"
 @    s6 hidden false
 @    s6 type xy
-@    s6 symbol 0
+@    s6 symbol 4
 @    s6 symbol size 1.000000
-@    s6 symbol color 2
+@    s6 symbol color 10
 @    s6 symbol pattern 1
-@    s6 symbol fill color 2
+@    s6 symbol fill color 10
 @    s6 symbol fill pattern 0
 @    s6 symbol linewidth 1.0
 @    s6 symbol linestyle 1
@@ -599,9 +571,9 @@
 @    s6 symbol char font 0
 @    s6 symbol skip 0
 @    s6 line type 1
-@    s6 line linestyle 5
-@    s6 line linewidth 2.0
-@    s6 line color 2
+@    s6 line linestyle 2
+@    s6 line linewidth 1.0
+@    s6 line color 10
 @    s6 line pattern 1
 @    s6 baseline type 0
 @    s6 baseline off
@@ -623,7 +595,7 @@
 @    s6 avalue offset 0.000000 , 0.000000
 @    s6 errorbar on
 @    s6 errorbar place both
-@    s6 errorbar color 2
+@    s6 errorbar color 10
 @    s6 errorbar pattern 1
 @    s6 errorbar size 1.000000
 @    s6 errorbar linewidth 1.0
@@ -632,15 +604,15 @@
 @    s6 errorbar riser linestyle 1
 @    s6 errorbar riser clip off
 @    s6 errorbar riser clip length 0.100000
-@    s6 comment "y =0.333333*ln(x)+A1"
-@    s6 legend  "1/3Log(l)+A"
+@    s6 comment "/home/vincenzo/Github/ran_negativity/data/re"
+@    s6 legend  "DMRG L=96"
 @    s7 hidden false
 @    s7 type xy
-@    s7 symbol 4
+@    s7 symbol 2
 @    s7 symbol size 1.000000
-@    s7 symbol color 10
+@    s7 symbol color 3
 @    s7 symbol pattern 1
-@    s7 symbol fill color 10
+@    s7 symbol fill color 3
 @    s7 symbol fill pattern 0
 @    s7 symbol linewidth 1.0
 @    s7 symbol linestyle 1
@@ -650,7 +622,7 @@
 @    s7 line type 1
 @    s7 line linestyle 2
 @    s7 line linewidth 1.0
-@    s7 line color 10
+@    s7 line color 3
 @    s7 line pattern 1
 @    s7 baseline type 0
 @    s7 baseline off
@@ -672,7 +644,7 @@
 @    s7 avalue offset 0.000000 , 0.000000
 @    s7 errorbar on
 @    s7 errorbar place both
-@    s7 errorbar color 10
+@    s7 errorbar color 3
 @    s7 errorbar pattern 1
 @    s7 errorbar size 1.000000
 @    s7 errorbar linewidth 1.0
@@ -681,71 +653,58 @@
 @    s7 errorbar riser linestyle 1
 @    s7 errorbar riser clip off
 @    s7 errorbar riser clip length 0.100000
-@    s7 comment "/home/vincenzo/Github/ran_negativity/data/re"
-@    s7 legend  "DMRG L=96"
+@    s7 comment "Cols 1:2"
+@    s7 legend  "DMRG L=128"
+@    s8 hidden false
+@    s8 type xy
+@    s8 symbol 0
+@    s8 symbol size 1.000000
+@    s8 symbol color 2
+@    s8 symbol pattern 1
+@    s8 symbol fill color 2
+@    s8 symbol fill pattern 0
+@    s8 symbol linewidth 1.0
+@    s8 symbol linestyle 1
+@    s8 symbol char 65
+@    s8 symbol char font 0
+@    s8 symbol skip 0
+@    s8 line type 1
+@    s8 line linestyle 5
+@    s8 line linewidth 2.0
+@    s8 line color 2
+@    s8 line pattern 1
+@    s8 baseline type 0
+@    s8 baseline off
+@    s8 dropline off
+@    s8 fill type 0
+@    s8 fill rule 0
+@    s8 fill color 1
+@    s8 fill pattern 1
+@    s8 avalue off
+@    s8 avalue type 2
+@    s8 avalue char size 1.000000
+@    s8 avalue font 0
+@    s8 avalue color 1
+@    s8 avalue rot 0
+@    s8 avalue format general
+@    s8 avalue prec 3
+@    s8 avalue prepend ""
+@    s8 avalue append ""
+@    s8 avalue offset 0.000000 , 0.000000
+@    s8 errorbar on
+@    s8 errorbar place both
+@    s8 errorbar color 2
+@    s8 errorbar pattern 1
+@    s8 errorbar size 1.000000
+@    s8 errorbar linewidth 1.0
+@    s8 errorbar linestyle 1
+@    s8 errorbar riser linewidth 1.0
+@    s8 errorbar riser linestyle 1
+@    s8 errorbar riser clip off
+@    s8 errorbar riser clip length 0.100000
+@    s8 comment "y =0.333333*ln(x)+A1"
+@    s8 legend  "1/3Log(l)+A"
 @target G0.S0
-@type xy
-1 0.991735
-2 1.13168
-3 1.35365
-4 1.33554
-5 1.49503
-6 1.42258
-7 1.5613
-8 1.4451
-&
-@target G0.S1
-@type xy
-1 0.970748
-2 1.16096
-3 1.3425
-4 1.38612
-5 1.50549
-6 1.51032
-7 1.6059
-8 1.59045
-9 1.67341
-10 1.64397
-11 1.71939
-12 1.67831
-13 1.7488
-14 1.69694
-15 1.76474
-16 1.70137
-&
-@target G0.S2
-@type xy
-1 0.95976
-1 0.959785
-2 1.17414
-2 1.17411
-3 1.33413
-3 1.33416
-4 1.40456
-4 1.40454
-5 1.50296
-5 1.503
-6 1.53729
-6 1.53729
-7 1.61233
-7 1.61241
-8 1.62956
-9 1.69206
-10 1.69865
-11 1.75367
-12 1.7529
-13 1.80266
-14 1.79646
-15 1.84196
-16 1.83148
-17 1.87361
-18 1.86018
-19 1.89867
-20 1.88263
-21 1.91748
-22 1.90063
-&
-@target G0.S3
 @type xy
 1 0.97056235
 2 1.1611178
@@ -764,7 +723,7 @@
 15 1.7657299
 16 1.7021461
 &
-@target G0.S4
+@target G0.S1
 @type xy
 1 0.9594357
 2 1.1744177
@@ -798,7 +757,7 @@
 30 1.9460788
 31 1.9805189
 &
-@target G0.S5
+@target G0.S2
 @type xy
 1 0.99164716
 2 1.1317001
@@ -809,7 +768,123 @@
 7 1.5605491
 8 1.4443157
 &
+@target G0.S3
+@type xy
+1 0.96318976
+2 1.1700859
+3 1.3367909
+4 1.3990064
+5 1.5039101
+6 1.529382
+7 1.6107462
+8 1.6184363
+9 1.6872564
+10 1.6839108
+11 1.7449443
+12 1.7336502
+13 1.7894363
+14 1.7717828
+15 1.8238786
+16 1.8007103
+17 1.8501783
+18 1.8219099
+19 1.8695457
+20 1.8363057
+21 1.8827594
+22 1.8444561
+23 1.8903057
+24 1.8466497
+&
+@target G0.S4
+@type xy
+1 0.991735
+2 1.13168
+3 1.35365
+4 1.33554
+5 1.49503
+6 1.42258
+7 1.5613
+8 1.4451
+&
+@target G0.S5
+@type xy
+1 0.970748
+2 1.16096
+3 1.3425
+4 1.38612
+5 1.50549
+6 1.51032
+7 1.6059
+8 1.59045
+9 1.67341
+10 1.64397
+11 1.71939
+12 1.67831
+13 1.7488
+14 1.69694
+15 1.76474
+16 1.70137
+&
 @target G0.S6
+@type xy
+1 0.963391
+2 1.16993
+3 1.3371
+4 1.399
+5 1.50442
+6 1.52955
+7 1.61144
+8 1.61877
+9 1.68805
+10 1.68426
+11 1.74576
+12 1.73416
+13 1.78983
+14 1.77225
+15 1.82349
+16 1.8005
+17 1.8484
+18 1.82076
+19 1.86585
+20 1.83413
+21 1.87683
+22 1.84036
+23 1.88054
+24 1.8397
+&
+@target G0.S7
+@type xy
+1 0.95976
+1 0.959785
+2 1.17414
+2 1.17411
+3 1.33413
+3 1.33416
+4 1.40456
+4 1.40454
+5 1.50296
+5 1.503
+6 1.53729
+6 1.53729
+7 1.61233
+7 1.61241
+8 1.62956
+9 1.69206
+10 1.69865
+11 1.75367
+12 1.7529
+13 1.80266
+14 1.79646
+15 1.84196
+16 1.83148
+17 1.87361
+18 1.86018
+19 1.89867
+20 1.88263
+21 1.91748
+22 1.90063
+&
+@target G0.S8
 @type xy
 1 1.016708
 1.2222222 1.0835982
@@ -911,31 +986,4 @@
 22.555556 2.0553674
 22.777778 2.0586354
 23 2.0618717
-&
-@target G0.S7
-@type xy
-1 0.963391
-2 1.16993
-3 1.3371
-4 1.399
-5 1.50442
-6 1.52955
-7 1.61144
-8 1.61877
-9 1.68805
-10 1.68426
-11 1.74576
-12 1.73416
-13 1.78983
-14 1.77225
-15 1.82349
-16 1.8005
-17 1.8484
-18 1.82076
-19 1.86585
-20 1.83413
-21 1.87683
-22 1.84036
-23 1.88054
-24 1.8397
 &
