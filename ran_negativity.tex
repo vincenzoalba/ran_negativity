@@ -87,15 +87,6 @@
 %########################################################################
 \section{Introduction}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%e
-%\begin{figure*}[t]
-%\includegraphics*[width=0.99\linewidth]{./draft_figs/}
-%\caption{
-%}
-%\label{fig1}
-%\end{figure*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %########################################################################
 \section{The disordered $XX$ chain}
@@ -194,10 +185,111 @@ $\epsilon_q$, the components of the eigenvector with $-\epsilon_q$ are given
 as $(-1)^{i+1}\Phi_q(i)$. This also implies that the ground state of~\eqref{xx_ham} 
 is in the sector with $M=L/2$ fermions. 
 
+The reduced density matrix for a subsystem $A$ is determined by the correlation 
+matrix restricted to $A$ as 
+%
+\begin{equation}
+{\mathcal C}_{ij}\equiv\langle c_i^\dagger c_j\rangle, 
+\end{equation}
+%
+where $i,j\in A$. In particular, given the eigenvalues $\lambda_k$ of ${\mathcal C}$, 
+the entanglement entropy $S_A$ is given as 
+%
+\begin{equation}
+S_A=-\sum_k(\lambda_k\log\lambda_k+(1-\lambda_k)\log(1-\lambda_k)).
+\end{equation}
+%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%e
+\begin{figure}[t]
+\includegraphics*[width=0.99\linewidth]{./draft_figs/rXX_exact}
+\caption{
+}
+\label{fig1}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%########################################################################
+\section{The entanglement negativity in DMRG}
+\label{neg-dmrg}
 
+Here we show how to calculate the logarithmic negativity in DMRG simulations. 
 
+We consider a generic $1D$ lattice of $L$ sites. We restrict ourselves to the 
+situation with open boundary conditions. On each site $i$ of the lattice we 
+consider a local Hilbert space $\mathbb{H}_i$ of finite dimension $d$ (e.g., for 
+spin-$1/2$ systems one has $d=2$). A generic wavefunction $|\Psi\rangle$ corresponding 
+to a pure stae living in $\mathbb{H}^{\otimes L}$ can be written in Matrix-Product-State 
+(MPS) language as 
+%
+\begin{equation}
+|\Psi\rangle=\sum\limits_{\sigma_1,\sigma_2,\dots,\sigma_L}A^{\sigma_1}_{\alpha_1}
+A^{\sigma_2}_{\alpha_1\alpha_2}\cdots A^{\sigma_L}_{\alpha_L}|\sigma_1,\dots,
+\sigma_L\rangle.
+\label{mps} 
+\end{equation}
+%
+Here $1\le\sigma_i\le d$ is the so-called physical index that labels the states 
+in the local Hilbert space, whereas $1\le\alpha_i\le\chi_i$ are the virtual 
+indices, and $\chi_i$ is the bond dimension of the MPS. In~\eqref{mps} we the sum 
+over the repeated indices $\alpha_i$ is assumed and $|\sigma_1,\sigma_2,\dots,
+\sigma_L\rangle\equiv|\sigma_1\rangle\otimes|\sigma_2\rangle\cdots|\sigma_L\rangle$, 
+with $|\sigma_i\rangle$ an element of the base of the Hilbert space at site 
+$i$. 
+
+At each site $1<i<L$, for each fixed $\sigma_i$, $A^{\sigma_i}_{\alpha_{i-1}\alpha_i}$ 
+is a $\chi_i\times\chi_i$ matrix, while $A^{\sigma_1}_{\alpha_1}$ and 
+$A^{\sigma_L}_{\alpha_L}$ are vectors. 
+
+The MPS in~\eqref{mps} can be pictorially represented as in Fig. .... From~\eqref{mps} 
+one obtains that $\langle\Psi|$ is given as 
+%
+\begin{equation}
+\langle\Psi|=\langle\sigma_1,\dots,\sigma_L| \sum\limits_{\sigma_1,\sigma_2,
+\dots,\sigma_L}\bar A^{\sigma_1}_{\alpha_1}\bar A^{\sigma_2}_{\alpha_1\alpha_2}\cdots 
+\bar A^{\sigma_L}_{\alpha_L}
+\label{mps_conj} 
+\end{equation}
+%
+where the bar in $\bar A^{\sigma_i}_{\alpha_{i-1}\alpha_i}$ represents the complex 
+conjugation. 
+
+The full system density matrix $\rho\equiv|\Psi\rangle\langle\Psi|$ is obtained as
+%
+\begin{widetext}
+%
+\begin{equation}
+\rho=\sum\limits_{\substack{\sigma_1,\dots,\sigma_L\\\sigma_1',\dots,\sigma_L'}}
+(A^{\sigma_1}_{\alpha_1}\bar A^{\sigma_1'}_{\alpha_1'})(A^{\sigma_2}_{\alpha_1,\alpha_2}
+\bar A^{\sigma_2'}_{\alpha_1',\alpha_2'})\cdots (A^{\sigma_L}_{\alpha_L}
+\bar A^{\sigma_L'}_{\alpha_L'})|\sigma_1\rangle\langle\sigma_1'|\otimes\cdots\otimes
+|\sigma_L\rangle\langle\sigma_L'|. 
+\end{equation}
+%
+\end{widetext}
+%
+The pictorial representation of $\rho$ is shown in Fig. ... . 
+
+We now introduce a tripartition of the system as $S=A_1\cup A_1\cup B$, where $A_1$ and 
+$A_2$ are the subintervals of interest and $B$ the remaining part of the system. 
+To be specific we consider the case of two intervals of length $\ell_1$ and $\ell_2$ 
+at mutual distance $d$ with $A_1=[s+1,\dots,s+\ell_1]$ $A_2=[s+\ell_1+d+1,\dots,s+
+\ell_1+d+\ell_2]$ with $A_1$ shifted from the left boundary of the chain by $s$ sites.
+The reduced density matrix $\rho_{A1\cup A_2}$ is obtained by tracing over the degrees 
+of freedom of $B$ as 
+%
+\begin{widetext}
+\begin{equation}
+\rho_{A_1\cup A_2}=\sum\limits_{\substack{\{\sigma^{(1)}_i,\sigma'^{(1)}_{i}\}\\
+\{\sigma^{(2)}_j,\sigma'^{(2)}_{j}\}}}
+%\sum\limits_{\substack{\gamma,\zeta\\\alpha,\alpha'\\\beta,\beta'}}
+M^{\alpha,\beta}_{\alpha',\beta'}A^{\sigma^{(1)}_1}_{\gamma,\nu_1}\bar 
+A^{\sigma'^{(1)}_1}_{\gamma,\nu'_1}\prod\limits_{n=2}^{\ell_1-1}
+A^{\sigma^{(1)}_n}_{\nu_{n-1},\nu_n}\bar A^{\sigma'^{(1)}_n}_{\nu'_{n-1},\nu'_n}
+A^{\sigma^{(1)}_{\ell_1}}_{\nu_{\ell_1-1},\alpha}\bar A^{\sigma'^{(1)}_{\ell_1}}_{\nu'_{\ell_1-1},\alpha'}
+\end{equation}
+\end{widetext}
+%
 
 %##########################################################################
 \begin{thebibliography}{99}
@@ -206,6 +298,8 @@ is in the sector with $M=L/2$ fermions.
 
 F.~Igl\'oi, R.~Juh\'asz, and H.~Rieger, Phys.\ Rev.\ B {\bf 61}, 11552 (2000).
 
+P.~Pippan, S.~R.~White, and H.~G.~Evertz, Phys.\ Rev.\ B {\bf 81}, 081103(R) 
+(2010). 
 
 \end{thebibliography}
 

@@ -1,6 +1,6 @@
 Random XX chain: entanglement entropy
-L = 64; 
-nsample = 90000; 
+L = 32; 
+nsample = 10000; 
 data = {}; 
 For[n = 1, n <= nsample, n++,JJ = Table[RandomReal[], {i, 1, L - 1}]; AppendTo[JJ, 0]; 
      T = Table[(JJ[[j]]/2.)*KroneckerDelta[i, j + 1] + (JJ[[j - 1]]/2.)*KroneckerDelta[i, j - 1], 
@@ -12,4 +12,4 @@ For[n = 1, n <= nsample, n++,JJ = Table[RandomReal[], {i, 1, L - 1}]; AppendTo[J
        Ent = Sum[If[Abs[eeig[[i]]] > 0 && Abs[eeig[[i]]] < 1, (-eeig[[i]])*Log[eeig[[i]]] - 
            (1 - eeig[[i]])*Log[1 - eeig[[i]]], 0], {i, 1, Length[eeig]}]; AppendTo[ent, Ent]; ]; 
      Print[ent]; ];
-Export["/u/he/valba/Github/negatitivy/ran_negativity/mathematica/test.dat", data]; 
+(*Export["/u/he/valba/Github/negatitivy/ran_negativity/mathematica/test.dat", data];*)

@@ -1,0 +1,7 @@
+data = Import["/u/he/valba/Github/negatitivy/ran_negativity/mathematica/re64", "TSV"]; 
+list = {}; 
+For[i = 1, i <= Length[ToExpression[data[[1,1]]]], i++, 
+  Print[i]; temp = Table[ToExpression[data[[k,1]]][[i]], {k, 1, Length[data]}]; 
+   AppendTo[list, {i, Mean[temp], StandardDeviation[temp]/Sqrt[Length[data]]}]; ]
+Print["fatto"];
+
