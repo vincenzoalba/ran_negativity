@@ -1,0 +1,333 @@
+\documentclass[twocolumn,superscriptaddress,prb,10pt]{revtex4-1}
+%\usepackage{verbatim}
+\usepackage{amsmath,amssymb}
+%\usepackage{unicode-math}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[colorlinks,bookmarks=false,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+\usepackage{times}
+
+
+
+
+
+%\usepackage[dvips]{graphics}
+
+
+
+%%%%%%%%%%%%%   useful shortcuts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def \h{\hbar}   %  \h won't be used for any greek letter
+\def \refe{\eqref}
+\def \trm{\textrm}
+\def \f{\frac}
+\def \hf{\tfrac{1}{2}}    \def \HF{\dfrac{1}{2}}
+\def \u{\uparrow}
+\def \d{\downarrow}
+
+\def \ord{\mathcal{O}}
+\newcommand{\ra}{\rightarrow}   \newcommand{\lra}{\longrightarrow}  
+
+\def\lba{\left(}    \def\rba{\right)}
+\def\lbc{\left[}    \def\rbc{\right]}
+\def\lbb{\left\{}    \def\rbb{\right\}}
+
+\def\tr{\textrm{Tr}}
+\def\refe{\eqref}
+
+\newcommand{\bra}[1]{\langle\left.{#1}\right|}
+\newcommand{\ket}[1]{\left|{#1}\right.\rangle}
+\newcommand{\xpct}[1]{\langle{#1}\rangle}    % expectatn value
+
+%\DeclareMathOperator{\tr}{tr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\vp}{{\bf p}}  % usual vector quantities
+\newcommand{\vq}{{\bf q}}  % double bracketing not required with \vec
+\newcommand{\vk}{{\bf k}}  % but required with \bf
+
+\renewcommand{\vr}{{\bf r}} 
+\newcommand{\vx}{{\bf x}}
+
+\newcommand{\hc}{\hat{c}}  \newcommand{\hcd}{\hat{c}^\dag} 
+\newcommand{\hd}{\hat{d}}  \newcommand{\hdd}{\hat{d}^\dag} 
+
+
+
+
+
+
+\begin{document}
+
+\title{The logarithmic negativity in random spin chains} 
+
+%\author{Vincenzo Alba}
+%\affiliation{International School for Advanced Studies (SISSA),
+%Via Bonomea 265, 34136, Trieste, Italy, 
+%INFN, Sezione di Trieste}
+
+\author{Authors}
+
+\date{\today}
+
+
+
+
+\begin{abstract} 
+
+
+\end{abstract}
+
+% \pacs{73.43.Cd, 71.10.Pm  {\tt check!}}
+
+\maketitle
+
+
+%########################################################################
+\section{Introduction}
+
+
+%########################################################################
+\section{The disordered $XX$ chain}
+\label{dis-XX}
+
+The disordered $XX$ chain is defined by the Hamiltonian 
+%
+\begin{equation}
+{\mathcal H}_{XX}=\sum\limits_{i=1}^{L-1}J_i(S^x_iS^x_{i+1}+S^y_i
+S^y_{i+1})+h\sum\limits_{i=1}^{L}S_i^z, 
+\label{xx_ham}
+\end{equation}
+%
+with $S^{x,y,z}_i\equiv\sigma_i^{x,y,z}/2$, $\sigma_i^\alpha$ 
+being the Pauli matrices acting on site $i$. For periodic 
+boundary conditions one has an extra term in Eq.~\eqref{xx_ham} 
+connecting site $L$ with site $1$. Hereafter we fix $h=0$ and 
+choose $J_i$ uniformily distributed in $[0,1]$. After the Jordan-Wigner 
+transformation 
+%
+\begin{equation}
+c_i=\Big(\prod\limits_{m=1}^{i-1}\sigma^z_m\Big)
+\frac{\sigma_i^x-i\sigma_i^y}{2},
+\label{j-wigner}
+\end{equation}
+%
+\eqref{xx_ham} is recast in the free-fermionic form 
+%
+\begin{equation}
+{\mathcal H}_{XX}=\frac{1}{2}\sum\limits_{i=1}^{L-1}J_i(c^\dagger_i 
+c_{i+1}+c^\dagger_{i+1}c_i)+\frac{h}{2}\sum\limits_{i=1}^{L-1}
+c^\dagger_i c_i,
+\label{xx_fer}
+\end{equation}
+%
+with $c_i$ spinless fermionic operators satisfying the canonical 
+anticommutation relations $\{c_m,c^\dagger_n\}=\delta_{m,n}$. 
+The mapping between Eq.~\eqref{xx_ham} and Eq.~\eqref{xx_fer} 
+is exact apart from boundary terms (that we neglect here) giving a 
+vanishing contribution (as $1/L$) to physical quantities in the  large 
+chain limit. 
+
+By imposing that the single-particle eigenstates $|\Psi_q\rangle$ (with $q$ 
+an integer labelling the different eigenstates) of~\eqref{xx_fer} are of 
+the form 
+%
+\begin{equation}
+\eta_q^\dagger|0\rangle\equiv|\Psi_q\rangle=\sum_i\Phi_q(i)c_i^\dagger|0\rangle,
+\end{equation}
+%
+with $|0\rangle$ the vacuum and $\Phi_q(i)$ the eigenstate amplitudes. 
+The Schr\"odinger equation gives the equation for $\Phi_q(i)$ as 
+%
+\begin{equation}
+\label{xx-eig}
+(J_i\Phi_q(i+1)+J_{i-1}\Phi_q(i-1))/2=\epsilon_q\Phi_q(i),\quad i=1,\dots,L, 
+\end{equation}
+%
+and $J_L=0$. Eq.~\eqref{xx-eig} corresponds to finding the eigenvectors 
+of the banded matrix $T=(J_j\delta_{i,j+1}+J_{j-1}\delta_{i,j-1})/2$. The eigenvalues 
+corresponds to the single-particle eigenergies $\epsilon_q$. 
+
+The ground state $|GS\rangle$ of~\eqref{xx_ham} is obtained by filling all the 
+negative modes $\epsilon_q$ as 
+%
+\begin{equation}
+|GS\rangle=\eta^\dagger_{q_M}\eta^\dagger_{q_{M-1}}\cdots\eta_{q_1}^\dagger|0\rangle.
+\end{equation}
+%
+One has the anticommutation relations
+%
+\begin{equation}
+\{\eta^\dagger_q,c^\dagger_j\}=\{\eta_q,c_j\}=0
+\end{equation}
+%
+and
+%
+\begin{equation}
+\{\eta_q^\dagger,c_j\}=\Phi_q(j)\delta_{k,j},\quad\{\eta_q,c^\dagger_j\}=\Phi^*(j)
+\delta_{k,j}
+\end{equation}
+%
+These imply that the expectation value of the two-point function in a generic 
+eigenstate of~\eqref{xx_ham} is given as 
+%
+\begin{equation}
+\langle c_i^\dagger c_j\rangle=\sum_{q}\Phi_q^*(i)\Phi_q(j), 
+\end{equation}
+%
+where the sum if over the $q$ single-particle excitations forming the 
+eigenstate. 
+
+One can show that the eigenvalus of the matrix $T$ are organized in pairs with 
+opposite sign. Given the components $\Phi_1(i)$ of the eigenvector with eigenvalue 
+$\epsilon_q$, the components of the eigenvector with $-\epsilon_q$ are given 
+as $(-1)^{i+1}\Phi_q(i)$. This also implies that the ground state of~\eqref{xx_ham} 
+is in the sector with $M=L/2$ fermions. 
+
+The reduced density matrix for a subsystem $A$ is determined by the correlation 
+matrix restricted to $A$ as 
+%
+\begin{equation}
+{\mathcal C}_{ij}\equiv\langle c_i^\dagger c_j\rangle, 
+\end{equation}
+%
+where $i,j\in A$. In particular, given the eigenvalues $\lambda_k$ of ${\mathcal C}$, 
+the entanglement entropy $S_A$ is given as 
+%
+\begin{equation}
+S_A=-\sum_k(\lambda_k\log\lambda_k+(1-\lambda_k)\log(1-\lambda_k)).
+\end{equation}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%e
+\begin{figure}[t]
+\includegraphics*[width=0.99\linewidth]{./draft_figs/rXX_exact}
+\caption{
+}
+\label{fig1}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%########################################################################
+\section{The entanglement negativity in DMRG}
+\label{neg-dmrg}
+
+Here we show how to calculate the logarithmic negativity in DMRG simulations. 
+
+We consider a generic $1D$ lattice of $L$ sites. We restrict ourselves to the 
+situation with open boundary conditions. On each site $i$ of the lattice we 
+consider a local Hilbert space $\mathbb{H}_i$ of finite dimension $d$ (e.g., for 
+spin-$1/2$ systems one has $d=2$). A generic wavefunction $|\Psi\rangle$ corresponding 
+to a pure stae living in $\mathbb{H}^{\otimes L}$ can be written in Matrix-Product-State 
+(MPS) language as 
+%
+\begin{equation}
+|\Psi\rangle=\sum\limits_{\sigma_1,\sigma_2,\dots,\sigma_L}A^{\sigma_1}_{\alpha_1}
+A^{\sigma_2}_{\alpha_1\alpha_2}\cdots A^{\sigma_L}_{\alpha_L}|\sigma_1,\dots,
+\sigma_L\rangle.
+\label{mps} 
+\end{equation}
+%
+Here $1\le\sigma_i\le d$ is the so-called physical index that labels the states 
+in the local Hilbert space, whereas $1\le\alpha_i\le\chi_i$ are the virtual 
+indices, and $\chi_i$ is the bond dimension of the MPS. In~\eqref{mps} we the sum 
+over the repeated indices $\alpha_i$ is assumed and $|\sigma_1,\sigma_2,\dots,
+\sigma_L\rangle\equiv|\sigma_1\rangle\otimes|\sigma_2\rangle\cdots|\sigma_L\rangle$, 
+with $|\sigma_i\rangle$ an element of the base of the Hilbert space at site 
+$i$. 
+
+At each site $1<i<L$, for each fixed $\sigma_i$, $A^{\sigma_i}_{\alpha_{i-1}\alpha_i}$ 
+is a $\chi_i\times\chi_i$ matrix, while $A^{\sigma_1}_{\alpha_1}$ and 
+$A^{\sigma_L}_{\alpha_L}$ are vectors. 
+
+The MPS in~\eqref{mps} can be pictorially represented as in Fig. .... From~\eqref{mps} 
+one obtains that $\langle\Psi|$ is given as 
+%
+\begin{equation}
+\langle\Psi|=\langle\sigma_1,\dots,\sigma_L| \sum\limits_{\sigma_1,\sigma_2,
+\dots,\sigma_L}\bar A^{\sigma_1}_{\alpha_1}\bar A^{\sigma_2}_{\alpha_1\alpha_2}\cdots 
+\bar A^{\sigma_L}_{\alpha_L}
+\label{mps_conj} 
+\end{equation}
+%
+where the bar in $\bar A^{\sigma_i}_{\alpha_{i-1}\alpha_i}$ represents the complex 
+conjugation. 
+
+The full system density matrix $\rho\equiv|\Psi\rangle\langle\Psi|$ is obtained as
+%
+\begin{widetext}
+%
+\begin{equation}
+\rho=\sum\limits_{\substack{\sigma_1,\dots,\sigma_L\\\sigma_1',\dots,\sigma_L'}}
+(A^{\sigma_1}_{\alpha_1}\bar A^{\sigma_1'}_{\alpha_1'})(A^{\sigma_2}_{\alpha_1,\alpha_2}
+\bar A^{\sigma_2'}_{\alpha_1',\alpha_2'})\cdots (A^{\sigma_L}_{\alpha_L}
+\bar A^{\sigma_L'}_{\alpha_L'})|\sigma_1\rangle\langle\sigma_1'|\otimes\cdots\otimes
+|\sigma_L\rangle\langle\sigma_L'|. 
+\end{equation}
+%
+\end{widetext}
+%
+The pictorial representation of $\rho$ is shown in Fig. ... . 
+
+We now introduce a tripartition of the system as $S=A_1\cup A_1\cup B$, where $A_1$ and 
+$A_2$ are the subintervals of interest and $B$ the remaining part of the system. 
+To be specific we consider the case of two intervals of length $\ell_1$ and $\ell_2$ 
+at mutual distance $d$ with $A_1=[s+1,\dots,s+\ell_1]$ $A_2=[s+\ell_1+d+1,\dots,s+
+\ell_1+d+\ell_2]$ with $A_1$ shifted from the left boundary of the chain by $s$ sites.
+The reduced density matrix $\rho_{A1\cup A_2}$ is obtained by tracing over the degrees 
+of freedom of $B$ as 
+%
+%\begin{widetext}
+%\begin{multline}
+%\rho_{A_1\cup A_2}=\sum\limits_{\substack{\{\sigma^{(1)}_i,\sigma'^{(1)}_{i}\\
+%\sigma^{(2)}_j,\sigma'^{(2)}_{j}\}}}
+%E^{\alpha,\beta}_{\alpha',\beta'}
+%A^{\sigma^{(1)}_1}_{\gamma,\nu_1}\bar A^{\sigma'^{(1)}_1}_{\gamma,\nu'_1}
+%\Big[\prod\limits_{n=2}^{\ell_1-1}A^{\sigma^{(1)}_n}_{\nu_{n-1},\nu_n}
+%\bar A^{\sigma'^{(1)}_n}_{\nu'_{n-1},\nu'_n}\Big]
+%A^{\sigma^{(1)}_{\ell_1}}_{\nu_{\ell_1-1},\alpha}\bar 
+%A^{\sigma'^{(1)}_{\ell_1}}_{\nu'_{\ell_1-1},\alpha'}\\
+%A^{\sigma^{(2)}_1}_{\beta,\mu_1}\bar A^{\sigma'^{(2)}_1}_{\beta',\mu'_1}
+%\Big[\prod\limits_{n=2}^{\ell_2-1}A^{\sigma^{(2)}_n}_{\mu_{n-1},\mu_n}
+%\bar A^{\sigma'^{(2)}_n}_{\mu'_{n-1},\mu'_n}\Big]
+%A^{\sigma^{(2)}_{\ell_2}}_{\mu_{\ell_2-1},\gamma'}\bar 
+%A^{\sigma'^{(2)}_{\ell_2}}_{\mu'_{\ell_2-1},\gamma'}\prod\limits_{i\in A_1\cup A_2}
+%|\sigma_i\rangle\langle\sigma'_i|.
+%\end{multline}
+%\end{widetext}
+%
+%
+\begin{widetext}
+\begin{equation}
+\rho_{A_1\cup A_2}=\sum\limits_{\substack{\{\sigma_i,\sigma'_{i}: i\in A_1\cup A_2\}}
+E^{\nu_{\ell_1+1},\mu_{\ell_2}}_{\nu'_{\ell_1+1},\mu'_{\ell_2}}
+\Big[\prod\limits_{n\in A_1}A^{\sigma_n}_{\nu_{n},\nu_{n+_1}}
+\bar A^{\sigma'_n}_{\nu'_{n},\nu'_{n+1}}\Big]
+\Big[\prod\limits_{n\in A_2}A^{\sigma_n}_{\mu_{n},\mu_{n+1}}
+\bar A^{\sigma'_n}_{\mu'_{n},\mu'_{n+1}}\Big]
+\prod\limits_{i\in A_1\cup A_2}
+|\sigma_i\rangle\langle\sigma'_i|.
+\end{equation}
+\end{widetext}
+%
+
+Here the matrix
+
+
+%##########################################################################
+\begin{thebibliography}{99}
+
+\bibitem{caux-2009}
+
+F.~Igl\'oi, R.~Juh\'asz, and H.~Rieger, Phys.\ Rev.\ B {\bf 61}, 11552 (2000).
+
+P.~Pippan, S.~R.~White, and H.~G.~Evertz, Phys.\ Rev.\ B {\bf 81}, 081103(R) 
+(2010). 
+
+\end{thebibliography}
+
+\end{document}
+
+
+

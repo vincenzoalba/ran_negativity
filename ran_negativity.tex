@@ -278,18 +278,91 @@ at mutual distance $d$ with $A_1=[s+1,\dots,s+\ell_1]$ $A_2=[s+\ell_1+d+1,\dots,
 The reduced density matrix $\rho_{A1\cup A_2}$ is obtained by tracing over the degrees 
 of freedom of $B$ as 
 %
+%\begin{widetext}
+%\begin{multline}
+%\rho_{A_1\cup A_2}=\sum\limits_{\substack{\{\sigma^{(1)}_i,\sigma'^{(1)}_{i}\\
+%\sigma^{(2)}_j,\sigma'^{(2)}_{j}\}}}
+%E^{\alpha,\beta}_{\alpha',\beta'}
+%A^{\sigma^{(1)}_1}_{\gamma,\nu_1}\bar A^{\sigma'^{(1)}_1}_{\gamma,\nu'_1}
+%\Big[\prod\limits_{n=2}^{\ell_1-1}A^{\sigma^{(1)}_n}_{\nu_{n-1},\nu_n}
+%\bar A^{\sigma'^{(1)}_n}_{\nu'_{n-1},\nu'_n}\Big]
+%A^{\sigma^{(1)}_{\ell_1}}_{\nu_{\ell_1-1},\alpha}\bar 
+%A^{\sigma'^{(1)}_{\ell_1}}_{\nu'_{\ell_1-1},\alpha'}\\
+%A^{\sigma^{(2)}_1}_{\beta,\mu_1}\bar A^{\sigma'^{(2)}_1}_{\beta',\mu'_1}
+%\Big[\prod\limits_{n=2}^{\ell_2-1}A^{\sigma^{(2)}_n}_{\mu_{n-1},\mu_n}
+%\bar A^{\sigma'^{(2)}_n}_{\mu'_{n-1},\mu'_n}\Big]
+%A^{\sigma^{(2)}_{\ell_2}}_{\mu_{\ell_2-1},\gamma'}\bar 
+%A^{\sigma'^{(2)}_{\ell_2}}_{\mu'_{\ell_2-1},\gamma'}\prod\limits_{i\in A_1\cup A_2}
+%|\sigma_i\rangle\langle\sigma'_i|.
+%\end{multline}
+%\end{widetext}
+%
+%
 \begin{widetext}
-\begin{equation}
-\rho_{A_1\cup A_2}=\sum\limits_{\substack{\{\sigma^{(1)}_i,\sigma'^{(1)}_{i}\}\\
-\{\sigma^{(2)}_j,\sigma'^{(2)}_{j}\}}}
-%\sum\limits_{\substack{\gamma,\zeta\\\alpha,\alpha'\\\beta,\beta'}}
-M^{\alpha,\beta}_{\alpha',\beta'}A^{\sigma^{(1)}_1}_{\gamma,\nu_1}\bar 
-A^{\sigma'^{(1)}_1}_{\gamma,\nu'_1}\prod\limits_{n=2}^{\ell_1-1}
-A^{\sigma^{(1)}_n}_{\nu_{n-1},\nu_n}\bar A^{\sigma'^{(1)}_n}_{\nu'_{n-1},\nu'_n}
-A^{\sigma^{(1)}_{\ell_1}}_{\nu_{\ell_1-1},\alpha}\bar A^{\sigma'^{(1)}_{\ell_1}}_{\nu'_{\ell_1-1},\alpha'}
-\end{equation}
+\begin{multline}
+\label{rho12}
+\rho_{A_1\cup A_2}=\sum\limits_{\substack{\{\sigma_i,\sigma'_{i}:\, i\in A_1\cup A_2\}}}
+\delta_{\nu_1,\nu_1'}\underbrace{\left(\prod\limits_{n\in A_1}A^{\sigma_n}_{\nu_{n},\nu_{n+1}}\right)}_{F_1}
+\left(\prod_{n\in A_1}\bar A^{\sigma'_n}_{\nu'_{n},\nu'_{n+1}}\right)
+[E_{12}]^{\nu_{\ell_1+1},\nu_{\ell_1+d+1}}_{\nu'_{\ell_1+1},\nu'_{\ell_1+d+1}}\\
+\underbrace{\left(\prod\limits_{m\in A_2}A^{\sigma_m}_{\nu_{m},\nu_{m+1}}\right)}_{F_2}
+\left(\prod_{m\in A_2}\bar A^{\sigma'_m}_{\nu'_{m},\nu'_{m+1}}\right)
+\delta_{\nu_{\ell_1+\ell_2+d+1},
+\nu'_{\ell_1+\ell_2+d+1}}\prod\limits_{i\in A_1\cup A_2}
+|\sigma_i\rangle\langle\sigma'_i|.
+\end{multline}
 \end{widetext}
 %
+Here the index $n\in[1,\dots,\ell_1]$ ($m\in[d+\ell_1+1,\dots,d+\ell_1+\ell_2]$) counts 
+only the spins in the interval $A_1$ ($A_2$). Notice that the two Kronecker delta 
+in~\eqref{rho12} are because the virtual indices $\nu_1,\nu'_1$ and 
+$\nu_{\ell_1+\ell_2+d+1},\nu'_{\ell_1+\ell_2+d+1}$ are contracted. Moreover, repeated 
+indices are summed over, and the term in the first square bracket in~\eqref{rho12} 
+depends on $\nu_{\ell_1+1}$ and $\nu'_{\ell_1+1}$. Finally, the tensor $F_1$ depends on 
+the physical indices $\sigma_1,\dots,\sigma_{\ell_1}$ and on $\nu_1,\nu_{\ell_1+1}$.
+In~\eqref{rho12} we defined the ``transfer matrix'' between the two intervals $E$ as 
+%
+\begin{equation}
+\label{E}
+[E_{12}]^{\nu_{\ell_1+1},\nu_{\ell_1+d+1}}_{\nu'_{\ell_1+1},\nu'_{\ell_1+d+1}}\equiv 
+\prod\limits_{j\in B_1}A^{\sigma_j}_{\nu_j,\nu_{j+1}}
+\bar A^{\sigma_j}_{\nu'_j,\nu'_{j+1}}. 
+\end{equation}
+%
+Notice that all the spin indices are contracted in~\eqref{E}. Also, the computational 
+cost for constructing $E$ is ${\mathcal O}(\chi^6_{max})$, with $\chi_{max}$ the 
+largest bond dimension in the chain. 
+It is also convenient for later to define the analogous tensors $E_1$ and $E_2$ for 
+the intervals $A_1$ and $A_2$ as 
+%
+\begin{align}
+& [E_1]^{\nu_1,\nu_{\ell_1+1}}_{\nu'_1,\nu'_{\ell_1+1}}\equiv
+\prod\limits_{j\in A_1}A^{\sigma_j}_{\nu_j,\nu_{j+1}}
+\bar A^{\sigma_j}_{\nu'_j,\nu'_{j+1}}\\
+& [E_2]^{\nu_{\ell_1+d+1},\nu_{\ell_1+\ell_2+d+1}}_{\nu'_{\ell_1+d+1},
+\nu'_{\ell_1+\ell_2+d+1}}\equiv
+\prod\limits_{j\in A_2}A^{\sigma_j}_{\nu_j,\nu_{j+1}}
+\bar A^{\sigma_j}_{\nu'_j,\nu'_{j+1}}.
+\end{align}
+%
+It is convenient to recast~\eqref{rho12} as 
+%
+\begin{widetext}
+\begin{multline}
+\rho_{A_1\cup A_2}=\sum_{\sigma_i:\, i\in A_1}
+[F_1]^{\sigma_1,\dots,\sigma_{\ell_1}}_{\nu_1,\nu_{\ell_1+1}}\prod_{j\in A_1}|\sigma_j\rangle
+\langle\sigma'_j|\sum_{\sigma'_i:\, i\in A_1}
+[\bar F_1]^{\sigma'_1,\dots,\sigma'_{\ell_1}}_{\nu'_1,\nu'_{\ell_1+1}}\\
+\otimes\sum_{\sigma_i:\, i\in A_2}
+[F_2]^{\sigma_{\ell_1+d+1},\dots,\sigma_{\ell_1+\ell_2+d+1}}_{\nu_{\ell_1+d+1},
+\nu_{\ell_1+\ell_2+d+1}}\prod_{j\in A_2}|\sigma_j\rangle\langle\sigma'_j|
+\sum_{\sigma'_i:\, i\in A_2}
+[\bar F_2]^{\sigma'_{\ell_1+d+1},\dots,\sigma'_{\ell_1+\ell_2+d+1}}_{\nu'_{\ell_1+d+1},
+\nu'_{\ell_1+\ell_2+d+1}}
+\end{multline}
+\end{widetext}
+%
+
 
 %##########################################################################
 \begin{thebibliography}{99}
@@ -300,6 +373,9 @@ F.~Igl\'oi, R.~Juh\'asz, and H.~Rieger, Phys.\ Rev.\ B {\bf 61}, 11552 (2000).
 
 P.~Pippan, S.~R.~White, and H.~G.~Evertz, Phys.\ Rev.\ B {\bf 81}, 081103(R) 
 (2010). 
+
+\bibitem{laflorencie-2005}
+N.~Laflorencie, Phys.\ Rev.\ B {\bf 72}, 140408(R) (2005). 
 
 \end{thebibliography}
 
