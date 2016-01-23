@@ -63,7 +63,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Tue Jan 19 10:46:38 2016"
+@timestamp def "Thu Jan 21 10:08:07 2016"
 @with string
 @    string on
 @    string loctype view
@@ -120,7 +120,7 @@
 @g0 fixedpoint format general general
 @g0 fixedpoint prec 6, 6
 @with g0
-@    world 0.937689004721, 0.21218487395, 25.8961554931, 1.16806722689
+@    world 0.928438628577, 0.190088142358, 24.6982334084, 1.35423249626
 @    stack world 0, 0, 0, 0
 @    znorm 1
 @    view 0.150000, 0.150000, 1.150000, 0.850000

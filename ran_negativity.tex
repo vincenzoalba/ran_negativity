@@ -352,15 +352,59 @@ It is convenient to recast~\eqref{rho12} as
 \rho_{A_1\cup A_2}=\sum_{\sigma_i:\, i\in A_1}
 [F_1]^{\sigma_1,\dots,\sigma_{\ell_1}}_{\nu_1,\nu_{\ell_1+1}}\prod_{j\in A_1}|\sigma_j\rangle
 \langle\sigma'_j|\sum_{\sigma'_i:\, i\in A_1}
-[\bar F_1]^{\sigma'_1,\dots,\sigma'_{\ell_1}}_{\nu'_1,\nu'_{\ell_1+1}}\\
-\otimes\sum_{\sigma_i:\, i\in A_2}
-[F_2]^{\sigma_{\ell_1+d+1},\dots,\sigma_{\ell_1+\ell_2+d+1}}_{\nu_{\ell_1+d+1},
+[\bar F_1]^{\sigma'_1,\dots,\sigma'_{\ell_1}}_{\nu'_1,\nu'_{\ell_1+1}}\,
+[E_{12}]^{\nu_{\ell_1+1},\nu_{\ell_1+d+1}}_{\nu'_{\ell_1+1},\nu'_{\ell_1+d+1}}
+\delta_{\nu_{\ell_1+\ell_2+d+1},
+\nu'_{\ell_1+\ell_2+d+1}}\delta_{\nu_1,\nu'_1}
+\\\otimes\sum_{\sigma_i:\, i\in A_2}
+[F_2]^{\sigma_{\ell_1+d+1},\dots,\sigma_{\ell_1+\ell_2+d}}_{\nu_{\ell_1+d+1},
 \nu_{\ell_1+\ell_2+d+1}}\prod_{j\in A_2}|\sigma_j\rangle\langle\sigma'_j|
 \sum_{\sigma'_i:\, i\in A_2}
-[\bar F_2]^{\sigma'_{\ell_1+d+1},\dots,\sigma'_{\ell_1+\ell_2+d+1}}_{\nu'_{\ell_1+d+1},
-\nu'_{\ell_1+\ell_2+d+1}}
+[\bar F_2]^{\sigma'_{\ell_1+d+1},\dots,\sigma'_{\ell_1+\ell_2+d}}_{\nu'_{\ell_1+d+1},
+\nu'_{\ell_1+\ell_2+d+1}}. 
 \end{multline}
 \end{widetext}
+%
+This can be rewritten in a more convenient form as 
+%
+\begin{widetext}
+\begin{multline}
+\label{rho12-s}
+\rho_{A_1\cup A_2}=\sum_{\sigma_i:\, i\in A_1}
+[F_1]^{\{\sigma_i\}}_{\nu_{1L},\nu_{1R}}\prod_{j\in A_1}|\sigma_j\rangle
+\langle\sigma'_j|\sum_{\sigma'_i:\, i\in A_1}
+[\bar F_1]^{\{\sigma'_i\}}_{\nu'_{1L},\nu'_{1R}}\,
+[E_{12}]^{\nu_{1R},\nu_{2L}}_{\nu'_{1R},\nu'_{2L}}
+\delta_{\nu_{2R},
+\nu'_{2R}}\delta_{\nu_{1L},\nu'_{1L}}
+\\\otimes\sum_{\sigma_i:\, i\in A_2}
+[F_2]^{\{\sigma_{i}\}}_{\nu_{2L},
+\nu_{2R}}\prod_{j\in A_2}|\sigma_j\rangle\langle\sigma'_j|
+\sum_{\sigma'_i:\, i\in A_2}
+[\bar F_2]^{\{\sigma'_i\}}_{\nu'_{2L},
+\nu'_{2R}},
+\end{multline}
+\end{widetext}
+%
+where we defined the indices $\nu_{1L}\equiv\nu_1,\nu_{1R}\equiv\nu_{\ell_1+1}$ 
+and $\nu_{2L}\equiv\nu_{\ell_1+1},\nu_{2R}\equiv\nu_{\ell_1+\ell_2+d+1}$. 
+
+After introducing the states
+%
+\begin{align}
+|w^{(1)}_{\nu_{1L},\nu_{1R}}\rangle\equiv\sum\limits_{\sigma_i:\,i\in A_1}
+[F_1]^{\{\sigma_i\}}_{\nu_{1L},\nu_{1R}}\prod\limits_{j\in A_1}|\sigma_j\rangle,\\
+|w^{(2)}_{\nu_{2L},\nu_{2R}}\rangle\equiv\sum\limits_{\sigma_i:\,i\in A_2}
+[F_2]^{\{\sigma_i\}}_{\nu_{2L},\nu_{2R}}\prod\limits_{j\in A_2}|\sigma_j\rangle.
+\end{align}
+%
+Eq.~\eqref{rho12-s} can be rewritten in the compact form  
+%
+\begin{equation}
+\rho_{A_1\cup A_2}=\delta_{\nu_{1L},\nu'_{1L}}\delta_{\nu_{2R},\nu'_{2R}}
+[E_{12}]^{\nu_{1R},\nu_{2L}}_{\nu'_{1R},\nu'_{2L}}|w^{(1)}_{\nu_{1L},\nu_{1R}}
+\rangle\langle w^{(1)}_{\nu'_{1L},\nu'_{1R}}|
+\end{equation}
 %
 
 
@@ -371,6 +415,7 @@ It is convenient to recast~\eqref{rho12} as
 
 F.~Igl\'oi, R.~Juh\'asz, and H.~Rieger, Phys.\ Rev.\ B {\bf 61}, 11552 (2000).
 
+\bibitem{pippan-2010}
 P.~Pippan, S.~R.~White, and H.~G.~Evertz, Phys.\ Rev.\ B {\bf 81}, 081103(R) 
 (2010). 
 

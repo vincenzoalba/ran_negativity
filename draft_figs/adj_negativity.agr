@@ -63,7 +63,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Tue Jan 19 17:31:24 2016"
+@timestamp def "Thu Jan 21 11:04:33 2016"
 @with string
 @    string on
 @    string loctype view
@@ -120,7 +120,7 @@
 @g0 fixedpoint format general general
 @g0 fixedpoint prec 6, 6
 @with g0
-@    world 0.859713803678, 0.245052386496, 8.6433517734, 0.762930317645
+@    world 0.398107171, 0.2, 11, 0.8
 @    stack world 0, 0, 0, 0
 @    znorm 1
 @    view 0.150000, 0.150000, 1.150000, 0.850000
@@ -313,12 +313,12 @@
 @    s0 comment "Cols 1:4:5"
 @    s0 legend  "DMRG L=32"
 @    s1 hidden false
-@    s1 type xy
-@    s1 symbol 0
+@    s1 type xydy
+@    s1 symbol 2
 @    s1 symbol size 1.000000
-@    s1 symbol color 2
+@    s1 symbol color 4
 @    s1 symbol pattern 1
-@    s1 symbol fill color 2
+@    s1 symbol fill color 4
 @    s1 symbol fill pattern 0
 @    s1 symbol linewidth 1.0
 @    s1 symbol linestyle 1
@@ -326,9 +326,9 @@
 @    s1 symbol char font 0
 @    s1 symbol skip 0
 @    s1 line type 1
-@    s1 line linestyle 5
-@    s1 line linewidth 1.5
-@    s1 line color 2
+@    s1 line linestyle 2
+@    s1 line linewidth 1.0
+@    s1 line color 4
 @    s1 line pattern 1
 @    s1 baseline type 0
 @    s1 baseline off
@@ -350,7 +350,7 @@
 @    s1 avalue offset 0.000000 , 0.000000
 @    s1 errorbar on
 @    s1 errorbar place both
-@    s1 errorbar color 2
+@    s1 errorbar color 4
 @    s1 errorbar pattern 1
 @    s1 errorbar size 1.000000
 @    s1 errorbar linewidth 1.0
@@ -359,8 +359,106 @@
 @    s1 errorbar riser linestyle 1
 @    s1 errorbar riser clip off
 @    s1 errorbar riser clip length 0.100000
-@    s1 comment "y = A0+0.115*ln(x)"
-@    s1 legend  "Log(2)/6 Log(l)+A"
+@    s1 comment "Cols 1:4:5"
+@    s1 legend  "DMRG L=40"
+@    s2 hidden false
+@    s2 type xy
+@    s2 symbol 0
+@    s2 symbol size 1.000000
+@    s2 symbol color 2
+@    s2 symbol pattern 1
+@    s2 symbol fill color 2
+@    s2 symbol fill pattern 0
+@    s2 symbol linewidth 1.0
+@    s2 symbol linestyle 1
+@    s2 symbol char 65
+@    s2 symbol char font 0
+@    s2 symbol skip 0
+@    s2 line type 1
+@    s2 line linestyle 5
+@    s2 line linewidth 1.5
+@    s2 line color 2
+@    s2 line pattern 1
+@    s2 baseline type 0
+@    s2 baseline off
+@    s2 dropline off
+@    s2 fill type 0
+@    s2 fill rule 0
+@    s2 fill color 1
+@    s2 fill pattern 1
+@    s2 avalue off
+@    s2 avalue type 2
+@    s2 avalue char size 1.000000
+@    s2 avalue font 0
+@    s2 avalue color 1
+@    s2 avalue rot 0
+@    s2 avalue format general
+@    s2 avalue prec 3
+@    s2 avalue prepend ""
+@    s2 avalue append ""
+@    s2 avalue offset 0.000000 , 0.000000
+@    s2 errorbar on
+@    s2 errorbar place both
+@    s2 errorbar color 2
+@    s2 errorbar pattern 1
+@    s2 errorbar size 1.000000
+@    s2 errorbar linewidth 1.0
+@    s2 errorbar linestyle 1
+@    s2 errorbar riser linewidth 1.0
+@    s2 errorbar riser linestyle 1
+@    s2 errorbar riser clip off
+@    s2 errorbar riser clip length 0.100000
+@    s2 comment "y = A0+0.115*ln(x)"
+@    s2 legend  "Log(2)/6 Log(l)+A"
+@    s3 hidden true
+@    s3 type xy
+@    s3 symbol 0
+@    s3 symbol size 1.000000
+@    s3 symbol color 3
+@    s3 symbol pattern 1
+@    s3 symbol fill color 3
+@    s3 symbol fill pattern 0
+@    s3 symbol linewidth 1.0
+@    s3 symbol linestyle 1
+@    s3 symbol char 65
+@    s3 symbol char font 0
+@    s3 symbol skip 0
+@    s3 line type 1
+@    s3 line linestyle 1
+@    s3 line linewidth 1.0
+@    s3 line color 3
+@    s3 line pattern 1
+@    s3 baseline type 0
+@    s3 baseline off
+@    s3 dropline off
+@    s3 fill type 0
+@    s3 fill rule 0
+@    s3 fill color 1
+@    s3 fill pattern 1
+@    s3 avalue off
+@    s3 avalue type 2
+@    s3 avalue char size 1.000000
+@    s3 avalue font 0
+@    s3 avalue color 1
+@    s3 avalue rot 0
+@    s3 avalue format general
+@    s3 avalue prec 3
+@    s3 avalue prepend ""
+@    s3 avalue append ""
+@    s3 avalue offset 0.000000 , 0.000000
+@    s3 errorbar on
+@    s3 errorbar place both
+@    s3 errorbar color 3
+@    s3 errorbar pattern 1
+@    s3 errorbar size 1.000000
+@    s3 errorbar linewidth 1.0
+@    s3 errorbar linestyle 1
+@    s3 errorbar riser linewidth 1.0
+@    s3 errorbar riser linestyle 1
+@    s3 errorbar riser clip off
+@    s3 errorbar riser clip length 0.100000
+@    s3 comment "y = A0+ln(2.)/3*ln(x)"
+@    s3 legend  ""
 @target G0.S0
 @type xydy
 1 0.2719118 0.0043951495
@@ -373,6 +471,19 @@
 8 0.71054808 0.0062198341
 &
 @target G0.S1
+@type xydy
+1 0.27480642 0.0110563
+2 0.42686571 0.011196463
+3 0.50771404 0.011379058
+4 0.57578292 0.012740102
+5 0.62106504 0.013142601
+6 0.6674044 0.014258659
+7 0.68925608 0.014503069
+8 0.7114792 0.016122819
+9 0.69608384 0.017992731
+10 0.70955585 0.02105538
+&
+@target G0.S2
 @type xy
 0.5 0.31665796
 0.58080808 0.33388637
@@ -474,4 +585,107 @@
 8.3383838 0.64026987
 8.4191919 0.64137898
 8.5 0.64247749
+&
+@target G0.S3
+@type xy
+0.9 0.22104264
+1.2242424 0.29213245
+1.5484848 0.34641851
+1.8727273 0.3903453
+2.1969697 0.42723995
+2.5212121 0.45904635
+2.8454545 0.48699936
+3.169697 0.5119326
+3.4939394 0.53443536
+3.8181818 0.55493969
+4.1424242 0.57377177
+4.4666667 0.59118391
+4.7909091 0.60737531
+5.1151515 0.62250599
+5.4393939 0.6367064
+5.7636364 0.65008436
+6.0878788 0.66272994
+6.4121212 0.67471917
+6.7363636 0.68611685
+7.0606061 0.69697861
+7.3848485 0.7073526
+7.7090909 0.71728075
+8.0333333 0.72679981
+8.3575758 0.73594215
+8.6818182 0.74473647
+9.0060606 0.7532083
+9.330303 0.76138044
+9.6545455 0.76927339
+9.9787879 0.77690558
+10.30303 0.78429371
+10.627273 0.79145289
+10.951515 0.79839689
+11.275758 0.80513826
+11.6 0.81168851
+11.924242 0.81805817
+12.248485 0.82425692
+12.572727 0.83029371
+12.89697 0.83617677
+13.221212 0.84191375
+13.545455 0.84751173
+13.869697 0.85297728
+14.193939 0.85831652
+14.518182 0.86353515
+14.842424 0.86863852
+15.166667 0.8736316
+15.490909 0.87851905
+15.815152 0.88330525
+16.139394 0.88799432
+16.463636 0.89259011
+16.787879 0.89709626
+17.112121 0.90151622
+17.436364 0.9058532
+17.760606 0.91011027
+18.084848 0.91429033
+18.409091 0.9183961
+18.733333 0.92243018
+19.057576 0.92639504
+19.381818 0.930293
+19.706061 0.93412629
+20.030303 0.93789702
+20.354545 0.9416072
+20.678788 0.94525874
+21.00303 0.94885347
+21.327273 0.95239313
+21.651515 0.95587938
+21.975758 0.9593138
+22.3 0.96269792
+22.624242 0.96603319
+22.948485 0.969321
+23.272727 0.97256267
+23.59697 0.9757595
+23.921212 0.9789127
+24.245455 0.98202344
+24.569697 0.98509285
+24.893939 0.98812203
+25.218182 0.991112
+25.542424 0.99406378
+25.866667 0.99697831
+26.190909 0.99985655
+26.515152 1.0026994
+26.839394 1.0055076
+27.163636 1.0082822
+27.487879 1.0110238
+27.812121 1.0137333
+28.136364 1.0164113
+28.460606 1.0190587
+28.784848 1.0216761
+29.109091 1.0242641
+29.433333 1.0268235
+29.757576 1.0293549
+30.081818 1.0318588
+30.406061 1.0343359
+30.730303 1.0367867
+31.054545 1.0392118
+31.378788 1.0416117
+31.70303 1.0439869
+32.027273 1.0463379
+32.351515 1.0486653
+32.675758 1.0509695
+33 1.0532509
 &

@@ -1,0 +1,239 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[      9175,        238]
+NotebookOptionsPosition[      8785,        218]
+NotebookOutlinePosition[      9118,        233]
+CellTagsIndexPosition[      9075,        230]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"linterval", "=", "8"}], ";"}], "\n", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", "\[LessEqual]", "1"}], ",", 
+   RowBox[{"i", "++"}], ",", 
+   RowBox[{
+    RowBox[{"coupname", "=", 
+     RowBox[{
+     "\"\</u/he/valba/Github/negatitivy/ran_negativity/mathematica/\
+couplingsrXXL32dE1E-11trunc300sweeps500x4n\>\"", "<>", 
+      RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.dat\>\""}]}], ";", 
+    RowBox[{"filename", "=", 
+     RowBox[{
+     "\"\</u/he/valba/Github/negatitivy/ran_negativity/mathematica/rXXL32dE1E-\
+11trunc300sweeps500x4n\>\"", "<>", 
+      RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.dat\>\""}]}], ";", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"FileExistsQ", "[", "filename", "]"}], ",", 
+      RowBox[{
+       RowBox[{"JJ1", "=", 
+        RowBox[{"ToExpression", "[", 
+         RowBox[{"Flatten", "[", 
+          RowBox[{"Import", "[", 
+           RowBox[{"coupname", ",", "\"\<TSV\>\""}], "]"}], "]"}], "]"}]}], 
+       ";", 
+       RowBox[{"dmrg", "=", 
+        RowBox[{"Import", "[", "filename", "]"}]}], ";", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "dmrg", "]"}], "\[Equal]", 
+          FractionBox["linterval", "2"]}], ",", 
+         RowBox[{
+          RowBox[{"JJ", "=", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"JJ1", "\[LeftDoubleBracket]", 
+              RowBox[{"1", ",", "i"}], "\[RightDoubleBracket]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", 
+               RowBox[{"Length", "[", 
+                RowBox[{
+                "JJ1", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+                 "]"}]}], "}"}]}], "]"}]}], ";", 
+          RowBox[{"AppendTo", "[", 
+           RowBox[{"JJ", ",", "0"}], "]"}], ";", 
+          RowBox[{"T", "=", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{
+              FractionBox[
+               RowBox[{
+                RowBox[{"KroneckerDelta", "[", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"j", "-", "1"}]}], "]"}], " ", 
+                RowBox[{"JJ", "\[LeftDoubleBracket]", 
+                 RowBox[{"j", "-", "1"}], "\[RightDoubleBracket]"}]}], "2."], 
+              "+", 
+              FractionBox[
+               RowBox[{
+                RowBox[{"KroneckerDelta", "[", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"j", "+", "1"}]}], "]"}], " ", 
+                RowBox[{
+                "JJ", "\[LeftDoubleBracket]", "j", 
+                 "\[RightDoubleBracket]"}]}], "2."]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", "L"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"j", ",", "1", ",", "L"}], "}"}]}], "]"}]}], ";", 
+          RowBox[{"Spect", "=", 
+           RowBox[{"Eigensystem", "[", "T", "]"}]}], ";", 
+          RowBox[{"ind", "=", 
+           RowBox[{"Table", "[", 
+            RowBox[{"j", ",", 
+             RowBox[{"{", 
+              RowBox[{"j", ",", "1", ",", "L"}], "}"}]}], "]"}]}], ";", 
+          RowBox[{"eigval", "=", 
+           RowBox[{
+           "Spect", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+          ";", 
+          RowBox[{"ind", "=", 
+           RowBox[{"Select", "[", 
+            RowBox[{"ind", ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+               "eigval", "\[LeftDoubleBracket]", "#1", 
+                "\[RightDoubleBracket]"}], "<", "0"}], "&"}]}], "]"}]}], ";", 
+          
+          RowBox[{"eigvec", "=", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"Spect", "\[LeftDoubleBracket]", 
+              RowBox[{"2", ",", 
+               RowBox[{
+               "ind", "\[LeftDoubleBracket]", "k", 
+                "\[RightDoubleBracket]"}]}], "\[RightDoubleBracket]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"k", ",", "1", ",", 
+               RowBox[{"Length", "[", "ind", "]"}]}], "}"}]}], "]"}]}], ";", 
+          RowBox[{
+           RowBox[{"Corr", "[", 
+            RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+           RowBox[{"Total", "[", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"eigvec", "\[LeftDoubleBracket]", 
+                RowBox[{"q", ",", "x"}], "\[RightDoubleBracket]"}], " ", 
+               RowBox[{"eigvec", "\[LeftDoubleBracket]", 
+                RowBox[{"q", ",", "y"}], "\[RightDoubleBracket]"}]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"q", ",", "1", ",", 
+                RowBox[{"Length", "[", "eigvec", "]"}]}], "}"}]}], "]"}], 
+            "]"}]}], ";", 
+          RowBox[{"ent", "=", 
+           RowBox[{"{", "}"}]}], ";", 
+          RowBox[{"ll", "=", "linterval"}], ";", 
+          RowBox[{"shift", "=", 
+           FractionBox[
+            RowBox[{"L", "-", "ll"}], "2"]}], ";", 
+          RowBox[{"cmat", "=", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"Corr", "[", 
+              RowBox[{
+               RowBox[{"shift", "+", "x"}], ",", 
+               RowBox[{"shift", "+", "y"}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "1", ",", "ll"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"y", ",", "1", ",", "ll"}], "}"}]}], "]"}]}], ";", 
+          RowBox[{"eeig", "=", 
+           RowBox[{"Eigenvalues", "[", "cmat", "]"}]}], ";", 
+          RowBox[{"Ent", "=", 
+           RowBox[{
+            UnderoverscriptBox["\[Sum]", 
+             RowBox[{"u", "=", "1"}], 
+             RowBox[{"Length", "[", "eeig", "]"}]], 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"Abs", "[", 
+                 RowBox[{
+                 "eeig", "\[LeftDoubleBracket]", "u", 
+                  "\[RightDoubleBracket]"}], "]"}], ">", "0"}], "&&", 
+               RowBox[{
+                RowBox[{"Abs", "[", 
+                 RowBox[{
+                 "eeig", "\[LeftDoubleBracket]", "u", 
+                  "\[RightDoubleBracket]"}], "]"}], "<", "1"}]}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"1", "-", 
+                  RowBox[{
+                  "eeig", "\[LeftDoubleBracket]", "u", 
+                   "\[RightDoubleBracket]"}]}], ")"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{"-", 
+                  RowBox[{"Log", "[", 
+                   RowBox[{"1", "-", 
+                    RowBox[{
+                    "eeig", "\[LeftDoubleBracket]", "u", 
+                    "\[RightDoubleBracket]"}]}], "]"}]}], ")"}]}], "-", 
+               RowBox[{
+                RowBox[{
+                "eeig", "\[LeftDoubleBracket]", "u", 
+                 "\[RightDoubleBracket]"}], " ", 
+                RowBox[{"Log", "[", 
+                 RowBox[{
+                 "eeig", "\[LeftDoubleBracket]", "u", 
+                  "\[RightDoubleBracket]"}], "]"}]}]}], ",", "0"}], "]"}]}]}],
+           ";", 
+          RowBox[{"numerical", "=", 
+           RowBox[{"dmrg", "\[LeftDoubleBracket]", 
+            RowBox[{
+             FractionBox["linterval", "2"], ",", "5"}], 
+            "\[RightDoubleBracket]"}]}], ";", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Abs", "[", 
+              RowBox[{"Ent", "-", "numerical"}], "]"}], "<", 
+             FractionBox["1", 
+              SuperscriptBox["10", "3"]]}], ",", 
+            RowBox[{
+             RowBox[{"Print", "[", "Ent", "]"}], ";"}]}], "]"}], ";"}]}], 
+        "]"}], ";"}]}], "]"}], ";"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6622851776776867`*^9, 3.662285269694531*^9}, {
+   3.662285426963594*^9, 3.662285517073468*^9}, {3.662285675278349*^9, 
+   3.662285818835187*^9}, {3.6622858974657917`*^9, 3.662286065207584*^9}, {
+   3.662286098151185*^9, 3.6622862290999527`*^9}, {3.662286309194187*^9, 
+   3.662286389864831*^9}, {3.662286562645417*^9, 3.6622866046680202`*^9}, {
+   3.6622867267697763`*^9, 3.6622868846388273`*^9}, {3.6622869879727907`*^9, 
+   3.6622869887327957`*^9}, {3.662287046755877*^9, 3.662287145841486*^9}, 
+   3.6622871861490307`*^9, {3.6622872643603563`*^9, 3.662287279606298*^9}, 
+   3.6622873377282667`*^9, 3.662291241067367*^9}]
+},
+WindowSize->{1920, 1003},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.2 for Linux x86 (64-bit) (July 6, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[400, 13, 8381, 203, 683, "Input"]
+}
+]
+*)
+

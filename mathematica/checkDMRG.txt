@@ -1,0 +1,11 @@
+L=32;
+linterval = 8; 
+For[i = 1, i <= 1, i++, coupname = StringJoin["/u/he/valba/Github/negatitivy/ran_negativity/mathematica/couplingsrXXL32dE1E-11trunc300sweeps500x4n", ToString[i], ".dat"]; 
+   filename = StringJoin["/u/he/valba/Github/negatitivy/ran_negativity/mathematica/rXXL32dE1E-11trunc300sweeps500x4n", ToString[i], ".dat"]; 
+   If[FileExistsQ[filename], JJ1 = ToExpression[Flatten[Import[coupname, "TSV"]]]; dmrg = Import[filename]; If[Length[dmrg] == linterval/2, 
+      JJ = Table[JJ1[[1,i]], {i, 1, Length[JJ1[[1]]]}]; AppendTo[JJ, 0]; T = Table[(KroneckerDelta[i, j - 1]*JJ[[j - 1]])/2. + (KroneckerDelta[i, j + 1]*JJ[[j]])/2., {i, 1, L}, {j, 1, L}]; 
+       Spect = Eigensystem[T]; ind = Table[j, {j, 1, L}]; eigval = Spect[[1]]; ind = Select[ind, eigval[[#1]] < 0 & ]; eigvec = Table[Spect[[2,ind[[k]]]], {k, 1, Length[ind]}]; 
+       Corr[x_, y_] := Total[Table[eigvec[[q,x]]*eigvec[[q,y]], {q, 1, Length[eigvec]}]]; ent = {}; ll = linterval; shift = (L - ll)/2; 
+       cmat = Table[Corr[shift + x, shift + y], {x, 1, ll}, {y, 1, ll}]; eeig = Eigenvalues[cmat]; 
+       Ent = Sum[If[Abs[eeig[[u]]] > 0 && Abs[eeig[[u]]] < 1, (1 - eeig[[u]])*(-Log[1 - eeig[[u]]]) - eeig[[u]]*Log[eeig[[u]]], 0], {u, 1, Length[eeig]}]; numerical = dmrg[[linterval/2,5]]; 
+If[Abs[Ent - numerical] < 1/10^3, Print[Ent]; ]; ]; ]; ]
