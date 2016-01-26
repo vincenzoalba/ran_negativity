@@ -316,7 +316,8 @@ of freedom of $B$ as
 Here the index $n\in[1,\dots,\ell_1]$ ($m\in[d+\ell_1+1,\dots,d+\ell_1+\ell_2]$) counts 
 only the spins in the interval $A_1$ ($A_2$). Notice that the two Kronecker delta 
 in~\eqref{rho12} are because the virtual indices $\nu_1,\nu'_1$ and 
-$\nu_{\ell_1+\ell_2+d+1},\nu'_{\ell_1+\ell_2+d+1}$ are contracted. Moreover, repeated 
+$\nu_{\ell_1+\ell_2+d+1},\nu'_{\ell_1+\ell_2+d+1}$ are contracted. They arise from 
+contracting the matrices $A$ lying outside the interval of interest. Moreover, repeated 
 indices are summed over, and the term in the first square bracket in~\eqref{rho12} 
 depends on $\nu_{\ell_1+1}$ and $\nu'_{\ell_1+1}$. Finally, the tensor $F_1$ depends on 
 the physical indices $\sigma_1,\dots,\sigma_{\ell_1}$ and on $\nu_1,\nu_{\ell_1+1}$.
@@ -400,12 +401,56 @@ After introducing the states
 %
 Eq.~\eqref{rho12-s} can be rewritten in the compact form  
 %
+\begin{widetext}
 \begin{equation}
 \rho_{A_1\cup A_2}=\delta_{\nu_{1L},\nu'_{1L}}\delta_{\nu_{2R},\nu'_{2R}}
 [E_{12}]^{\nu_{1R},\nu_{2L}}_{\nu'_{1R},\nu'_{2L}}|w^{(1)}_{\nu_{1L},\nu_{1R}}
-\rangle\langle w^{(1)}_{\nu'_{1L},\nu'_{1R}}|
+\rangle\langle w^{(1)}_{\nu'_{1L},\nu'_{1R}}|\otimes |w^{(2)}_{\nu_{2L},\nu_{2R}}
+\rangle\langle w^{(2)}_{\nu'_{2L},\nu'_{2R}}|.
+\end{equation}
+\end{widetext}
+%
+One should now observe that, although the vectors $|w^{(1)}_{\nu_{1L},\nu_{1R}}
+\rangle$ provide a basis for the interval $A_1$ (similarly for $A_2$) they are 
+not orthonormal (not even orthogonal). Clearly, one has that 
+%
+\begin{align}
+\langle w^{(1)}_{\nu_{1L},\nu_{1R}}|w^{(1)}_{\nu'_{1L},\nu'_{1R}}\rangle=
+[E_1]^{\nu_{1L},\nu_{1R}}_{\nu'_{1L},\nu'_{1R}} \\
+\langle w^{(2)}_{\nu_{2L},\nu_{2R}}|w^{(2)}_{\nu'_{2L},\nu'_{2R}}\rangle=
+[E_2]^{\nu_{2L},\nu_{2R}}_{\nu'_{2L},\nu'_{2R}}. 
+\end{align}
+%  
+A notable exception when the basis given by $|w^{(1)}_{\nu_{1L},\nu_{1R}}\rangle$ 
+and $|w^{(2)}_{\nu_{2L},\nu_{2R}}\rangle$ is orthogonal is when the two intervals 
+$A_1$ and $A_2$ are attached at the left and right edges of the chain, respectively. 
+In this situation the reduced density matrix is given as 
+%
+\begin{equation}
+[\rho_{A_1\cup A_2}]^{(\nu_{1R},\nu_{2L})}_{(\nu'_{1R},\nu'_{2L})}=
+[E_{12}]^{\nu_{1R},\nu_{2L}}_{\nu'_{1R},\nu'_{2L}}
 \end{equation}
 %
+and it is a $\chi^2_{max}\times\chi^2_{max}$ matrix. 
+In the more general case, one way to promote the basis to an orthonormal one is 
+by performing a singular value decomposition (SVD) of the matrices $E_1$ and $E_2$. 
+Given the SVD of $E_1$ as $E_1=UDU^\dagger$ with $U$ orthogonal and $D$ diagonal, 
+then the vectors $|v^{(1)}_m\rangle$ 
+%
+\begin{equation}
+|v^{(1)}_{m}\rangle\equiv [N_1]^m_{\nu_{1L},\nu_{1R}}|w^{(1)}_{\nu_{1L},\nu_{1R}}\rangle
+\end{equation}
+%
+with $N_1\equiv D^{-\frac{1}{2}}U$ are orthonormal. This leads to 
+%
+\begin{widetext}
+\begin{equation}
+\rho_{A_1\cup A_2}=
+\end{equation}
+\end{widetext}
+%
+
+
 
 
 %##########################################################################
